@@ -12,4 +12,11 @@ class Dice(Enum):
 
     @staticmethod
     def rollDice() -> 'Dice':
-        return random.choice(list(Dice))
+        one = [Dice.ONE] * 5
+        two = [Dice.TWO] * 10
+        three = [Dice.THREE] * 10
+        five = [Dice.FIVE] * 1
+        eight = [Dice.EIGHT] * 5
+        twentyfive = [Dice.TWENTY_FIVE] * 1
+        dice = one + two + three + five + eight + twentyfive
+        return random.choice(dice)
